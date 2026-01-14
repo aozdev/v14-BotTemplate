@@ -1,0 +1,5 @@
+{
+  "token": "BOT_TOKEN_HERE",
+  "mongoURI": "MONGO_URI_HERE",
+  "developerId": "YOUR_DISCORD_USER_ID"
+}
