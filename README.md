@@ -2,7 +2,7 @@
 
 This is a high-performance, clean, and easy-to-use Discord.js v14 template. This setup provides a solid foundation for building any type of Discord bot. It fully supports slash commands and features a modular handler system for commands and events.
 
-For installation or support, join the [Coders community](https://discord.gg/kyrSBzuepA).
+- For installation or support, join the [Coders community](https://discord.gg/kyrSBzuepA).
 
 🌟 **Support the project by giving it a star and forking the repository**
 
