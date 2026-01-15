@@ -9,7 +9,6 @@ const {
 const fs = require("fs");
 const path = require("path");
 const config = require("./config.json");
-const connectMongo = require("./database/mongo");
 
 const client = new Client({
   intents: [GatewayIntentBits.Guilds],
@@ -17,7 +16,6 @@ const client = new Client({
 
 client.commands = new Collection();
 
-/* Deploy slash commands */
 async function deployCommands() {
   const commands = [];
   const commandsPath = path.join(__dirname, "commands");
@@ -27,29 +25,29 @@ async function deployCommands() {
 
   for (const file of commandFiles) {
     const command = require(path.join(commandsPath, file));
-    if (!command.data) continue;
-    commands.push(command.data.toJSON());
+    if (command.data) {
+      commands.push(command.data.toJSON());
+    }
   }
 
   const rest = new REST({ version: "10" }).setToken(config.token);
 
   try {
-    console.log("🔄 Deploying slash commands...");
+    console.log("Started refreshing global application (/) commands.");
 
     await rest.put(
-      Routes.applicationCommands(config.clientId), 
+      Routes.applicationCommands(config.clientId),
       { body: commands }
     );
 
-    console.log("✅ Slash commands deployed.");
-  } catch (err) {
-    console.error("❌ Deploy failed:", err);
+    console.log("🚀 Successfully reloaded global application (/) commands.");
+  } catch (error) {
+    console.error(error);
   }
 }
 
 require("./handlers/commandHandler")(client);
 require("./handlers/eventHandler")(client);
-
 
 (async () => {
   await deployCommands();
