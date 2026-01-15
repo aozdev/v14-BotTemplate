@@ -1,12 +1,19 @@
-const fs = require("fs");
-const path = require("path");
+const { ActivityType } = require("discord.js");
 
-module.exports = (client) => {
-  const commandsPath = path.join(__dirname, "../commands");
-  const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith(".js"));
+module.exports = {
+  name: "ready",
+  once: true,
+  execute(client) {
+    console.log(`✅ Bot ready: ${client.user.tag}`);
 
-  for (const file of commandFiles) {
-    const command = require(`${commandsPath}/${file}`);
-    client.commands.set(command.data.name, command);
+    client.user.setPresence({
+      activities: [
+        {
+          name: "developed with 💗",
+          type: ActivityType.Playing 
+        }
+      ],
+      status: "online"
+    });
   }
 };
