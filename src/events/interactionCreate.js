@@ -1,5 +1,5 @@
 module.exports = {
-  name: 'interactionCreate',
+  name: "interactionCreate",
   async execute(interaction) {
     if (!interaction.isChatInputCommand()) return;
 
@@ -7,13 +7,22 @@ module.exports = {
     if (!command) return;
 
     try {
+
       await command.execute(interaction);
-    } catch (err) {
-      console.error(err);
+    } catch (error) {
+      console.error(error);
+
+      // Handle errors gracefully
       if (interaction.replied || interaction.deferred) {
-        await interaction.followUp({ content: 'Bir hata oluştu.', ephemeral: true });
+        await interaction.followUp({
+          content: "An error occurred while executing this command.",
+          ephemeral: true
+        });
       } else {
-        await interaction.reply({ content: 'Bir hata oluştu.', ephemeral: true });
+        await interaction.reply({
+          content: "An error occurred while executing this command.",
+          ephemeral: true
+        });
       }
     }
   }
