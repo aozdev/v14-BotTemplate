@@ -1,4 +1,4 @@
-# Discord.js v14 Template
+# Discord.js v14 Bot Template
 
 This is a high-performance, clean, and easy-to-use Discord.js v14 template. This setup provides a solid foundation for building any type of Discord bot. It fully supports slash commands and features a modular handler system for commands and events.
 
