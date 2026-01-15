@@ -16,7 +16,7 @@ This is a simple Discord.js v14 template example. If you want to code a Discord 
 4. Open a terminal (PowerShell or CMD) in the project directory.
 5. Run the following command to install dependencies:
 ```
-   npm install
+npm install
 ```
 6. Start the bot by running:
 ```
