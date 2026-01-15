@@ -4,15 +4,11 @@ This is a simple Discord.js v14 template example. If you want to code a Discord 
 
 ⭐ Help the development of this project by starring and forking it.
 
----
-
 ## Features
 
 - Fully supports slash commands
 - Easy to understand structure
 - MongoDB integration ready
-
----
 
 ## Installation
 
@@ -51,7 +47,6 @@ node src/index.js
 
 Your bot should now be online and ready to use!
 
----
 
 ## Support
 For any questions, help, or further guidance, join the [Coders community](https://discord.gg/kyrSBzuepA)
