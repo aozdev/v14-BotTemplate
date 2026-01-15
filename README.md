@@ -7,7 +7,7 @@ For installation or support, join the [Coders community](https://discord.gg/kyrS
 🌟 **Support the project by giving it a star and forking the repository!**
 
 <p align="center">
-  <img src="https://github.com/aozdev/v14-BotTemplate/blob/main/v14template-helpmenu.png?raw=true" alt="Bot Preview" width="600">
+  <img src="https://github.com/aozdev/v14-BotTemplate/helpmenu.png" alt="Bot Preview" width="600">
 </p>
 
 # Installation
