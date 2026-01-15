@@ -9,7 +9,6 @@ This is a simple Discord.js v14 template example. If you want to code a Discord 
 </p>
 
 # Setup
-## Installation
 
 1. Install **Node.js** on your computer.
 2. Download this project as a ZIP file and extract it to a folder.
