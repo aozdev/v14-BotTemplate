@@ -1,5 +1,5 @@
 {
-  "token": "BOT_TOKEN_HERE",
-  "mongoURI": "MONGO_URI_HERE",
+  "token": "BOT_TOKEN",
+  "clientId": "CLIENT_ID",
   "developerId": "YOUR_DISCORD_USER_ID"
 }
