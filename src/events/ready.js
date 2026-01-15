@@ -9,7 +9,7 @@ module.exports = {
     client.user.setPresence({
       activities: [
         {
-          name: "developed with 💗",
+          name: "developed by aozdev",
           type: ActivityType.Playing 
         }
       ],
